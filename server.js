@@ -13,6 +13,12 @@ app.get('/test', (req, res) => {
   });
 });
 
+app.get('/env', (req, res) => {
+  res.json({
+    env: process.env.TEST
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
